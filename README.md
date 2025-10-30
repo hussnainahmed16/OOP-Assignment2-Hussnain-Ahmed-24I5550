@@ -1,5 +1,5 @@
 
-# Assignment README File
+# OOP_Assignment 2
 
 This document explains the purpose, logic, implementation approach, and learning outcomes of all parts of the assignment.
 
@@ -61,7 +61,7 @@ Source: fileciteturn0file3
 
 ---
 
-## ✅ **Q4 — Ticket Queue (FIFO)**
+## **Q4 — Ticket Queue (FIFO)**
 Implements a movie ticket booking system:
 - Enqueue new customers
 - Dequeue served customers
@@ -77,7 +77,7 @@ Source: fileciteturn0file4
 
 ---
 
-## ✅ **Q5A — Stacks + Pattern Generation**
+## **Q5A — Stacks + Pattern Generation**
 Implements two stack types:
 - Linked-list-based
 - Array-based
@@ -93,7 +93,7 @@ Source: fileciteturn0file5
 
 ---
 
-## ✅ **Algorithm Analysis (Summary)**
+## **Algorithm Analysis (Summary)**
 
 ### Linked List Stack
 | Operation | Complexity | Reason |
@@ -115,7 +115,7 @@ Source: fileciteturn0file5
 
 ---
 
-## 🤝 **Conclusion**
+## **Conclusion**
 Through the implementation of queues, stacks, recursion, linked lists, and polymorphism, this assignment demonstrates:
 
 - Dynamic memory management
