@@ -1,0 +1,75 @@
+
+2) Algorithm Analysis — Stack Implementations
+
+This analysis evaluates the runtime performance of the two stack implementations used in the assignment:
+(1) a linked list–based stack, and
+(2) an array–based stack.
+The discussion focuses on the time complexity of the two primary stack operations: insertion (push) and deletion (pop),
+along with the performance characteristics of both approaches.
+
+Linked List–Based Stack
+In the linked list implementation, each element is stored dynamically inside a node containing the data and a pointer
+to the next node. The stack maintains a pointer to the top node.
+
+Push Operation
+To push a new element:
+• A new node is allocated,
+• Its next pointer is set to the current top,
+• The top pointer is updated.
+This work does not depend on the number of stored elements.
+Time Complexity: O(1)
+
+Pop Operation
+To pop:
+• The top node is removed,
+• The pointer is moved to the next node,
+• The removed node is deallocated.
+Again, this requires constant operations.
+Time Complexity: O(1)
+
+Additional Notes
+• Every element requires extra memory for the pointer.
+• Dynamic allocation introduces slight overhead.
+• The stack can grow freely without size limitations.
+
+Array–Based Stack
+In the array implementation, elements are stored in a contiguous memory block, and an integer index tracks the current top.
+
+Push Operation
+A push involves:
+• Incrementing the top index,
+• Storing the new element at that index.
+Access is direct.
+Time Complexity: O(1)
+
+Pop Operation
+A pop involves:
+• Returning the element at the top index,
+• Decrementing the index.
+No value shifting is required.
+Time Complexity: O(1)
+
+Additional Notes
+• No extra pointer overhead.
+• Faster due to spatial locality in memory.
+• Limited by the predefined array size (overflow possible if capacity exceeded).
+
+Performance Comparison
+Feature | Linked List Stack | Array Stack
+--------|------------------|-------------
+Push complexity | O(1) | O(1)
+Pop complexity | O(1) | O(1)
+Memory overhead | Higher | Lower
+Size flexibility | Unlimited | Fixed capacity
+Risk of overflow | None | Possible
+Cache locality | Lower | Higher
+
+Summary
+• Both implementations support constant-time insertion and deletion because only the top element is affected.
+• The array-based stack is typically faster due to better CPU caching and no heap allocation.
+• The linked list–based stack is more memory-flexible and avoids overflow but allocates nodes dynamically, increasing overhead.
+
+Conclusion
+Although the time complexity for insertion and deletion in both stacks is O(1), they behave differently based on memory layout and flexibility:
+• The array stack offers faster execution and efficient memory usage when the maximum size is known.
+• The linked list stack is preferable when stack size must grow dynamically and overflow must be avoided.
